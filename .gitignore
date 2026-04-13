@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / IntelliJ
+.idea/
+*.iml
+
+# Docker build artifacts
+*.tar
+*.tar.gz
+
+# Home Assistant addon build output
+build/
+dist/
+.builder/
+
+# devcontainer runtime
+.devcontainer/.supervisor_state
+
+# Logs
+*.log
+
+# Node (if tooling added later)
+node_modules/
+package-lock.json
+
+# Python (if tooling added later)
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+
+# Secrets – never commit
+secrets.yaml
+.secrets

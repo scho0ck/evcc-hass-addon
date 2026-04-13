@@ -1,0 +1,42 @@
+name: evcc Proxy
+version: 1.0.0
+panel_icon: "mdi:ev-station"
+panel_title: evcc
+slug: evcc-proxy
+description: Proxy addon for evcc – EV Charge Controller
+url: "https://github.com/evcc-io/evcc"
+startup: application
+boot: auto
+init: false
+webui: "http://[HOST]:[PORT:7070]/"
+watchdog: "http://[HOST]:[PORT:7070]/"
+ingress: true
+ingress_port: 7070           # evcc default port (was 5000 for Frigate)
+ingress_entry: /
+panel_admin: false
+ports:
+  7070/tcp: 7070
+ports_description:
+  7070/tcp: Web interface (not required for Home Assistant Ingress)
+host_network: false
+devices: []
+usb: false
+tmpfs: false
+full_access: false
+environment: {}
+options:
+  server: "http://evcc.local:7070"   # your evcc host:port
+  proxy_pass_host: true
+  proxy_pass_real_ip: true
+schema:
+  server: "match(^https?://.+:\\d+$)"
+  proxy_pass_host: bool
+  proxy_pass_real_ip: bool
+services: []
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map: []
