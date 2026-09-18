@@ -1,5 +1,5 @@
 name: evcc Proxy
-version: 1.0.0
+version: 1.0.1
 panel_icon: "mdi:ev-station"
 panel_title: evcc
 slug: evcc-proxy
